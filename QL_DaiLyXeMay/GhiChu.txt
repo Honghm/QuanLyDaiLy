@@ -1,0 +1,5 @@
+Ghi chú các l?p
+- QLDL_DAL: l?p ch?a các hàm k?t n?i v?i SQL Database
+-QLDL_DAO: Ch?a các hàm s? lý c?n thi?t cho t?ng ch?c nang tuong ?ng
+-QLDL_DTO: Ch?a các hàm d?ng c?n thi?t
+-QLDL_GUI: Ch?a giao di?n
