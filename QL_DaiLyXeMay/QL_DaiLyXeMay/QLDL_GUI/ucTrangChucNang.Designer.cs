@@ -42,6 +42,7 @@
             this.lbLapBaoCaoCongNo = new System.Windows.Forms.Label();
             this.txbTimKiem = new System.Windows.Forms.TextBox();
             this.pnLapPhieu = new System.Windows.Forms.Panel();
+            this.lbDS_PhieuThu = new System.Windows.Forms.Label();
             this.lbDS_PhieuXuat = new System.Windows.Forms.Label();
             this.lbPhieuXuatHang = new System.Windows.Forms.Label();
             this.lbPhieuThuTien = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.lbKhoHang = new System.Windows.Forms.Label();
             this.lbLapBaoCao = new System.Windows.Forms.Label();
             this.lbQuanLy = new System.Windows.Forms.Label();
-            this.lbDS_PhieuThu = new System.Windows.Forms.Label();
             this.pnChucNang.SuspendLayout();
             this.pnKhoHang.SuspendLayout();
             this.pnQuanLy.SuspendLayout();
@@ -240,6 +240,18 @@
             this.pnLapPhieu.TabIndex = 13;
             this.pnLapPhieu.Visible = false;
             // 
+            // lbDS_PhieuThu
+            // 
+            this.lbDS_PhieuThu.AutoSize = true;
+            this.lbDS_PhieuThu.BackColor = System.Drawing.Color.Transparent;
+            this.lbDS_PhieuThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDS_PhieuThu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbDS_PhieuThu.Location = new System.Drawing.Point(3, 88);
+            this.lbDS_PhieuThu.Name = "lbDS_PhieuThu";
+            this.lbDS_PhieuThu.Size = new System.Drawing.Size(138, 20);
+            this.lbDS_PhieuThu.TabIndex = 13;
+            this.lbDS_PhieuThu.Text = "DS phiếu thu tiền";
+            // 
             // lbDS_PhieuXuat
             // 
             this.lbDS_PhieuXuat.AutoSize = true;
@@ -311,6 +323,7 @@
             this.lbTimKiem.Size = new System.Drawing.Size(126, 29);
             this.lbTimKiem.TabIndex = 4;
             this.lbTimKiem.Text = "Tìm kiếm";
+            this.lbTimKiem.Click += new System.EventHandler(this.LbTimKiem_Click);
             // 
             // lbKhoHang
             // 
@@ -356,18 +369,6 @@
             this.lbQuanLy.Click += new System.EventHandler(this.lbQuanLy_Click);
             this.lbQuanLy.MouseLeave += new System.EventHandler(this.lbQuanLy_MouseLeave);
             this.lbQuanLy.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbQuanLy_MouseMove);
-            // 
-            // lbDS_PhieuThu
-            // 
-            this.lbDS_PhieuThu.AutoSize = true;
-            this.lbDS_PhieuThu.BackColor = System.Drawing.Color.Transparent;
-            this.lbDS_PhieuThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDS_PhieuThu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbDS_PhieuThu.Location = new System.Drawing.Point(3, 88);
-            this.lbDS_PhieuThu.Name = "lbDS_PhieuThu";
-            this.lbDS_PhieuThu.Size = new System.Drawing.Size(138, 20);
-            this.lbDS_PhieuThu.TabIndex = 13;
-            this.lbDS_PhieuThu.Text = "DS phiếu thu tiền";
             // 
             // ucTrangChucNang
             // 

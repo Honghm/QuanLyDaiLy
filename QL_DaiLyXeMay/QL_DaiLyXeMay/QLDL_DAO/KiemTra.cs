@@ -21,7 +21,7 @@ namespace QL_DaiLyXeMay.QLDL_DAO
         private KiemTra() { }
         public bool KiemTraTaiKhoan(string TaiKhoan, string MatKhau)
         {
-
+            return true;//bỏ qua bước đăng nhập, test
             string query = "SELECT MaNhanVien" +
                 " FROM dbo.TAIKHOAN WHERE MaNhanVien = '" + TaiKhoan + "' AND MatKhau = '" + MatKhau + "'";
             DataTable result = QLDL_DAL.Data_SQL.Instance.GetQuery(query);
@@ -30,7 +30,7 @@ namespace QL_DaiLyXeMay.QLDL_DAO
         }
         public int KiemTraLoaiTaiKhoan(string TenTaiKhoan)
         {
-
+            return 0;//set quyền vì đã bỏ qua bước đăng nhập, test
             string query = "SELECT LoaiTaiKhoan" +
                 " FROM dbo.TAIKHOAN WHERE MaNhanVien = '" + TenTaiKhoan + "'";
 

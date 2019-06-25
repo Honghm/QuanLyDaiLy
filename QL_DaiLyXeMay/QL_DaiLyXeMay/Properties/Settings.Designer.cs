@@ -33,5 +33,16 @@ namespace QL_DaiLyXeMay.Properties {
                 return ((string)(this["QUANLYDAILYConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\QLDL_DAL\\data" +
+            "QuanLyDaiLy.mdf;Integrated Security=True")]
+        public string dataQuanLyDaiLyConnectionString {
+            get {
+                return ((string)(this["dataQuanLyDaiLyConnectionString"]));
+            }
+        }
     }
 }

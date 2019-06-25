@@ -23,8 +23,11 @@ namespace QL_DaiLyXeMay.QLDL_DAL
 
         private Data_SQL() { }
 
-        private string connectionSTR = @"Data Source=DESKTOP-9J79O27\MINHHONG_UIT;Initial Catalog=QUANLYDAILY;Integrated Security=True";
-
+        private string connectionSTR = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ZBook\Documents\GitHub\QuanLyDaiLy\QL_DaiLyXeMay\QL_DaiLyXeMay\QLDL_DAL\dataQuanLyDaiLy.mdf;Integrated Security=True";
+        public string getConnectionString()
+        {
+            return connectionSTR;
+        }
         public DataTable GetQuery(string query, object[] parameter = null) //truy vấn
         {
             DataTable data = new DataTable();
@@ -136,6 +139,17 @@ namespace QL_DaiLyXeMay.QLDL_DAL
             }
             return get_Data;
         }
-        
+        public DataSet getDataByStringQueue(string _queue)
+        {
+            // thiết lập kết nối
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = connectionSTR;
+            con.Open();
+            DataSet ds = new DataSet();
+            SqlDataAdapter dap = new SqlDataAdapter(_queue, con);
+            dap.Fill(ds);
+            con.Close();
+            return ds;
+        }
     }
 }
