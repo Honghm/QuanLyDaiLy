@@ -105,16 +105,16 @@ namespace QL_DaiLyXeMay
 
         private void lbLapBaoCaoThang_Click(object sender, EventArgs e)
         {
-            //ucBaoCaoDoanhSo BaoCaoDoanhSo = new ucBaoCaoDoanhSo();
-            //pnChiTietChucNang.Controls.Clear();
-            //pnChiTietChucNang.Controls.Add(BaoCaoDoanhSo);
+            ucBaoCaoDoanhSo BaoCaoDoanhSo = new ucBaoCaoDoanhSo();
+            pnChiTietChucNang.Controls.Clear();
+            pnChiTietChucNang.Controls.Add(BaoCaoDoanhSo);
         }
 
         private void lbLapBaoCaoCongNo_Click(object sender, EventArgs e)
         {
-            //ucBaoCaoNoCong BaoCaoNoCong = new ucBaoCaoNoCong();
-            //pnChiTietChucNang.Controls.Clear();
-            //pnChiTietChucNang.Controls.Add(BaoCaoNoCong);
+            ucBaoCaoNoCong BaoCaoNoCong = new ucBaoCaoNoCong();
+            pnChiTietChucNang.Controls.Clear();
+            pnChiTietChucNang.Controls.Add(BaoCaoNoCong);
         }
 
         #endregion
@@ -264,12 +264,18 @@ namespace QL_DaiLyXeMay
 
 
 
-        #endregion
+
+
 
         #endregion
 
-       
+        #endregion
 
-       
+        private void LbTimKiem_Click(object sender, EventArgs e)
+        {
+            ucTimDaiLy timDaiLy = new ucTimDaiLy();
+            pnChiTietChucNang.Controls.Clear();
+            pnChiTietChucNang.Controls.Add(timDaiLy);
+        }
     }
 }

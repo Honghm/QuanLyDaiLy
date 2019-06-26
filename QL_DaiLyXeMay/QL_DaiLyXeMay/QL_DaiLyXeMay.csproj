@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +48,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1357.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1357.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
@@ -49,7 +71,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dataBAOCAONOCONG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataBAOCAONOCONG.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dataQuanLyDaiLyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataQuanLyDaiLyDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="QLDL_DAO\BaoCaoDoanhSoDAO.cs" />
+    <Compile Include="QLDL_DAO\BaoCaoNoCongDAO.cs" />
     <Compile Include="QLDL_DAO\DanhSachDaiLyDAO.cs" />
     <Compile Include="QLDL_DAO\DoiMatKhauDAO.cs" />
     <Compile Include="QLDL_DAO\DS_PhieuXuatDAO.cs" />
@@ -58,7 +92,11 @@
     <Compile Include="QLDL_DAO\PhieuThuTienDAO.cs" />
     <Compile Include="QLDL_DAO\PhieuXuatHangDAO.cs" />
     <Compile Include="QLDL_DAO\QuanTriVienDAO.cs" />
+<<<<<<< HEAD
     <Compile Include="QLDL_DAO\ThayDoiQuyDinhDAO.cs" />
+=======
+    <Compile Include="QLDL_DAO\TimDaiLyDAO.cs" />
+>>>>>>> 62a0fab0de90d763f312967f6f4c4b4f2a3f9fa1
     <Compile Include="QLDL_DTO\DoiMatKhauDTO.cs" />
     <Compile Include="QLDL_DTO\MatHangDTO.cs" />
     <Compile Include="QLDL_DTO\ChiTietXuatDTO.cs" />
@@ -76,6 +114,18 @@
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="QLDL_DAL\Data_SQL.cs" />
+    <Compile Include="QLDL_GUI\ucBaoCaoDoanhSo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLDL_GUI\ucBaoCaoDoanhSo.Designer.cs">
+      <DependentUpon>ucBaoCaoDoanhSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLDL_GUI\ucBaoCaoNoCong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLDL_GUI\ucBaoCaoNoCong.Designer.cs">
+      <DependentUpon>ucBaoCaoNoCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLDL_GUI\ucDanhSachPhieuXuat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,17 +175,36 @@
     <Compile Include="QLDL_GUI\ucPhieuXuatHang.Designer.cs">
       <DependentUpon>ucPhieuXuatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="QLDL_GUI\ucTimDaiLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLDL_GUI\ucTimDaiLy.Designer.cs">
+      <DependentUpon>ucTimDaiLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLDL_GUI\ucTrangChucNang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="QLDL_GUI\ucTrangChucNang.Designer.cs">
       <DependentUpon>ucTrangChucNang.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="QLDL_GUI\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLDL_GUI\frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLDL_GUI\rptBaoCaoDoanhSo.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLDL_GUI\rptBaoCaoNoCong.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLDL_GUI\ucBaoCaoDoanhSo.resx">
+      <DependentUpon>ucBaoCaoDoanhSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QLDL_GUI\ucBaoCaoNoCong.resx">
+      <DependentUpon>ucBaoCaoNoCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QLDL_GUI\ucDanhSachPhieuXuat.resx">
       <DependentUpon>ucDanhSachPhieuXuat.cs</DependentUpon>
@@ -171,9 +240,35 @@
     <EmbeddedResource Include="QLDL_GUI\ucPhieuXuatHang.resx">
       <DependentUpon>ucPhieuXuatHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QLDL_GUI\ucTimDaiLy.resx">
+      <DependentUpon>ucTimDaiLy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QLDL_GUI\ucTrangChucNang.resx">
       <DependentUpon>ucTrangChucNang.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dataBAOCAONOCONG.xsc">
+      <DependentUpon>dataBAOCAONOCONG.xsd</DependentUpon>
+    </None>
+    <None Include="dataBAOCAONOCONG.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataBAOCAONOCONG.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataBAOCAONOCONG.xss">
+      <DependentUpon>dataBAOCAONOCONG.xsd</DependentUpon>
+    </None>
+    <None Include="dataQuanLyDaiLyDataSet.xsc">
+      <DependentUpon>dataQuanLyDaiLyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dataQuanLyDaiLyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataQuanLyDaiLyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataQuanLyDaiLyDataSet.xss">
+      <DependentUpon>dataQuanLyDaiLyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,6 +294,39 @@
   <ItemGroup>
     <None Include="Resources\blue-paint-brush-stroke-1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="QLDL_DAL\dataQuanLyDaiLy.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="QLDL_DAL\dataQuanLyDaiLy_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>dataQuanLyDaiLy.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
