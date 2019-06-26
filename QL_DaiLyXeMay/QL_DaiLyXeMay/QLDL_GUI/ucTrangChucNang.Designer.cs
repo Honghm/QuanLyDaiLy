@@ -31,9 +31,6 @@
             this.pnChiTietChucNang = new System.Windows.Forms.Panel();
             this.pnChucNang = new System.Windows.Forms.Panel();
             this.lbThayDoiQuyDinh = new System.Windows.Forms.Label();
-            this.pnKhoHang = new System.Windows.Forms.Panel();
-            this.lbLapPhieuNhapHang = new System.Windows.Forms.Label();
-            this.lbQuanLyKho = new System.Windows.Forms.Label();
             this.pnQuanLy = new System.Windows.Forms.Panel();
             this.lbTiepNhanDaiLy = new System.Windows.Forms.Label();
             this.lbDanhSachDaiLy = new System.Windows.Forms.Label();
@@ -47,12 +44,9 @@
             this.lbPhieuThuTien = new System.Windows.Forms.Label();
             this.lbLapPhieu = new System.Windows.Forms.Label();
             this.lbTimKiem = new System.Windows.Forms.Label();
-            this.lbKhoHang = new System.Windows.Forms.Label();
             this.lbLapBaoCao = new System.Windows.Forms.Label();
             this.lbQuanLy = new System.Windows.Forms.Label();
-            this.lbDS_PhieuThu = new System.Windows.Forms.Label();
             this.pnChucNang.SuspendLayout();
-            this.pnKhoHang.SuspendLayout();
             this.pnQuanLy.SuspendLayout();
             this.pnLapBaoCao.SuspendLayout();
             this.pnLapPhieu.SuspendLayout();
@@ -71,14 +65,12 @@
             this.pnChucNang.BackColor = System.Drawing.Color.Transparent;
             this.pnChucNang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnChucNang.Controls.Add(this.lbThayDoiQuyDinh);
-            this.pnChucNang.Controls.Add(this.pnKhoHang);
             this.pnChucNang.Controls.Add(this.pnQuanLy);
             this.pnChucNang.Controls.Add(this.pnLapBaoCao);
             this.pnChucNang.Controls.Add(this.txbTimKiem);
             this.pnChucNang.Controls.Add(this.pnLapPhieu);
             this.pnChucNang.Controls.Add(this.lbLapPhieu);
             this.pnChucNang.Controls.Add(this.lbTimKiem);
-            this.pnChucNang.Controls.Add(this.lbKhoHang);
             this.pnChucNang.Controls.Add(this.lbLapBaoCao);
             this.pnChucNang.Controls.Add(this.lbQuanLy);
             this.pnChucNang.Location = new System.Drawing.Point(3, 4);
@@ -91,7 +83,7 @@
             this.lbThayDoiQuyDinh.BackColor = System.Drawing.Color.Transparent;
             this.lbThayDoiQuyDinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThayDoiQuyDinh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbThayDoiQuyDinh.Location = new System.Drawing.Point(9, 488);
+            this.lbThayDoiQuyDinh.Location = new System.Drawing.Point(29, 463);
             this.lbThayDoiQuyDinh.Name = "lbThayDoiQuyDinh";
             this.lbThayDoiQuyDinh.Size = new System.Drawing.Size(154, 59);
             this.lbThayDoiQuyDinh.TabIndex = 14;
@@ -99,46 +91,6 @@
             this.lbThayDoiQuyDinh.Click += new System.EventHandler(this.lbThayDoiQuyDinh_Click);
             this.lbThayDoiQuyDinh.MouseLeave += new System.EventHandler(this.lbThayDoiQuyDinh_MouseLeave);
             this.lbThayDoiQuyDinh.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbThayDoiQuyDinh_MouseMove);
-            // 
-            // pnKhoHang
-            // 
-            this.pnKhoHang.Controls.Add(this.lbLapPhieuNhapHang);
-            this.pnKhoHang.Controls.Add(this.lbQuanLyKho);
-            this.pnKhoHang.Location = new System.Drawing.Point(34, 419);
-            this.pnKhoHang.Name = "pnKhoHang";
-            this.pnKhoHang.Size = new System.Drawing.Size(148, 61);
-            this.pnKhoHang.TabIndex = 6;
-            this.pnKhoHang.Visible = false;
-            // 
-            // lbLapPhieuNhapHang
-            // 
-            this.lbLapPhieuNhapHang.AutoSize = true;
-            this.lbLapPhieuNhapHang.BackColor = System.Drawing.Color.Transparent;
-            this.lbLapPhieuNhapHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLapPhieuNhapHang.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbLapPhieuNhapHang.Location = new System.Drawing.Point(6, 4);
-            this.lbLapPhieuNhapHang.Name = "lbLapPhieuNhapHang";
-            this.lbLapPhieuNhapHang.Size = new System.Drawing.Size(133, 20);
-            this.lbLapPhieuNhapHang.TabIndex = 10;
-            this.lbLapPhieuNhapHang.Text = "Phiếu nhập hàng";
-            this.lbLapPhieuNhapHang.Click += new System.EventHandler(this.lbLapPhieuNhapHang_Click);
-            this.lbLapPhieuNhapHang.MouseLeave += new System.EventHandler(this.lbLapPhieuNhapHang_MouseLeave);
-            this.lbLapPhieuNhapHang.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbLapPhieuNhapHang_MouseMove);
-            // 
-            // lbQuanLyKho
-            // 
-            this.lbQuanLyKho.AutoSize = true;
-            this.lbQuanLyKho.BackColor = System.Drawing.Color.Transparent;
-            this.lbQuanLyKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuanLyKho.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbQuanLyKho.Location = new System.Drawing.Point(6, 37);
-            this.lbQuanLyKho.Name = "lbQuanLyKho";
-            this.lbQuanLyKho.Size = new System.Drawing.Size(97, 20);
-            this.lbQuanLyKho.TabIndex = 12;
-            this.lbQuanLyKho.Text = "Quản lý kho";
-            this.lbQuanLyKho.Click += new System.EventHandler(this.lbQuanLyKho_Click);
-            this.lbQuanLyKho.MouseLeave += new System.EventHandler(this.lbQuanLyKho_MouseLeave);
-            this.lbQuanLyKho.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbQuanLyKho_MouseMove);
             // 
             // pnQuanLy
             // 
@@ -184,7 +136,7 @@
             // 
             this.pnLapBaoCao.Controls.Add(this.lbLapBaoCaoThang);
             this.pnLapBaoCao.Controls.Add(this.lbLapBaoCaoCongNo);
-            this.pnLapBaoCao.Location = new System.Drawing.Point(34, 295);
+            this.pnLapBaoCao.Location = new System.Drawing.Point(37, 361);
             this.pnLapBaoCao.Name = "pnLapBaoCao";
             this.pnLapBaoCao.Size = new System.Drawing.Size(148, 61);
             this.pnLapBaoCao.TabIndex = 6;
@@ -230,13 +182,12 @@
             // 
             // pnLapPhieu
             // 
-            this.pnLapPhieu.Controls.Add(this.lbDS_PhieuThu);
             this.pnLapPhieu.Controls.Add(this.lbDS_PhieuXuat);
             this.pnLapPhieu.Controls.Add(this.lbPhieuXuatHang);
             this.pnLapPhieu.Controls.Add(this.lbPhieuThuTien);
-            this.pnLapPhieu.Location = new System.Drawing.Point(34, 137);
+            this.pnLapPhieu.Location = new System.Drawing.Point(34, 172);
             this.pnLapPhieu.Name = "pnLapPhieu";
-            this.pnLapPhieu.Size = new System.Drawing.Size(148, 114);
+            this.pnLapPhieu.Size = new System.Drawing.Size(148, 92);
             this.pnLapPhieu.TabIndex = 13;
             this.pnLapPhieu.Visible = false;
             // 
@@ -291,7 +242,7 @@
             this.lbLapPhieu.BackColor = System.Drawing.Color.Transparent;
             this.lbLapPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLapPhieu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbLapPhieu.Location = new System.Drawing.Point(9, 105);
+            this.lbLapPhieu.Location = new System.Drawing.Point(9, 140);
             this.lbLapPhieu.Name = "lbLapPhieu";
             this.lbLapPhieu.Size = new System.Drawing.Size(133, 29);
             this.lbLapPhieu.TabIndex = 8;
@@ -312,28 +263,13 @@
             this.lbTimKiem.TabIndex = 4;
             this.lbTimKiem.Text = "Tìm kiếm";
             // 
-            // lbKhoHang
-            // 
-            this.lbKhoHang.AutoSize = true;
-            this.lbKhoHang.BackColor = System.Drawing.Color.Transparent;
-            this.lbKhoHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbKhoHang.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbKhoHang.Location = new System.Drawing.Point(9, 385);
-            this.lbKhoHang.Name = "lbKhoHang";
-            this.lbKhoHang.Size = new System.Drawing.Size(129, 29);
-            this.lbKhoHang.TabIndex = 3;
-            this.lbKhoHang.Text = "Kho hàng";
-            this.lbKhoHang.Click += new System.EventHandler(this.lbKhoHang_Click);
-            this.lbKhoHang.MouseLeave += new System.EventHandler(this.lbKhoHang_MouseLeave);
-            this.lbKhoHang.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbKhoHang_MouseMove);
-            // 
             // lbLapBaoCao
             // 
             this.lbLapBaoCao.AutoSize = true;
             this.lbLapBaoCao.BackColor = System.Drawing.Color.Transparent;
             this.lbLapBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLapBaoCao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbLapBaoCao.Location = new System.Drawing.Point(9, 254);
+            this.lbLapBaoCao.Location = new System.Drawing.Point(12, 320);
             this.lbLapBaoCao.Name = "lbLapBaoCao";
             this.lbLapBaoCao.Size = new System.Drawing.Size(163, 29);
             this.lbLapBaoCao.TabIndex = 2;
@@ -357,18 +293,6 @@
             this.lbQuanLy.MouseLeave += new System.EventHandler(this.lbQuanLy_MouseLeave);
             this.lbQuanLy.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbQuanLy_MouseMove);
             // 
-            // lbDS_PhieuThu
-            // 
-            this.lbDS_PhieuThu.AutoSize = true;
-            this.lbDS_PhieuThu.BackColor = System.Drawing.Color.Transparent;
-            this.lbDS_PhieuThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDS_PhieuThu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbDS_PhieuThu.Location = new System.Drawing.Point(3, 88);
-            this.lbDS_PhieuThu.Name = "lbDS_PhieuThu";
-            this.lbDS_PhieuThu.Size = new System.Drawing.Size(138, 20);
-            this.lbDS_PhieuThu.TabIndex = 13;
-            this.lbDS_PhieuThu.Text = "DS phiếu thu tiền";
-            // 
             // ucTrangChucNang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -380,8 +304,6 @@
             this.Size = new System.Drawing.Size(1193, 644);
             this.pnChucNang.ResumeLayout(false);
             this.pnChucNang.PerformLayout();
-            this.pnKhoHang.ResumeLayout(false);
-            this.pnKhoHang.PerformLayout();
             this.pnQuanLy.ResumeLayout(false);
             this.pnQuanLy.PerformLayout();
             this.pnLapBaoCao.ResumeLayout(false);
@@ -397,9 +319,6 @@
         public System.Windows.Forms.Panel pnChiTietChucNang;
         private System.Windows.Forms.Panel pnChucNang;
         private System.Windows.Forms.Label lbThayDoiQuyDinh;
-        private System.Windows.Forms.Panel pnKhoHang;
-        private System.Windows.Forms.Label lbLapPhieuNhapHang;
-        private System.Windows.Forms.Label lbQuanLyKho;
         private System.Windows.Forms.Panel pnQuanLy;
         private System.Windows.Forms.Label lbTiepNhanDaiLy;
         private System.Windows.Forms.Label lbDanhSachDaiLy;
@@ -412,10 +331,8 @@
         private System.Windows.Forms.Label lbPhieuThuTien;
         private System.Windows.Forms.Label lbLapPhieu;
         private System.Windows.Forms.Label lbTimKiem;
-        private System.Windows.Forms.Label lbKhoHang;
         private System.Windows.Forms.Label lbLapBaoCao;
         private System.Windows.Forms.Label lbQuanLy;
         private System.Windows.Forms.Label lbDS_PhieuXuat;
-        private System.Windows.Forms.Label lbDS_PhieuThu;
     }
 }

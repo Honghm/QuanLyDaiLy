@@ -58,6 +58,7 @@
     <Compile Include="QLDL_DAO\PhieuThuTienDAO.cs" />
     <Compile Include="QLDL_DAO\PhieuXuatHangDAO.cs" />
     <Compile Include="QLDL_DAO\QuanTriVienDAO.cs" />
+    <Compile Include="QLDL_DAO\ThayDoiQuyDinhDAO.cs" />
     <Compile Include="QLDL_DTO\DoiMatKhauDTO.cs" />
     <Compile Include="QLDL_DTO\MatHangDTO.cs" />
     <Compile Include="QLDL_DTO\ChiTietXuatDTO.cs" />

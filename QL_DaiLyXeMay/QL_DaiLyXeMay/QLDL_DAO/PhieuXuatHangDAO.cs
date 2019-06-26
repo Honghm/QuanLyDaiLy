@@ -64,5 +64,9 @@ namespace QL_DaiLyXeMay.QLDL_DAO
             int result = QLDL_DAL.Data_SQL.Instance.GetNonQuery(query);
             return result > 0;
         }
+        public void updateTienNo(string tien)
+        {
+            Data_SQL.Instance.GetNonQuery("UPDATE dbo.DAILY SET SoNo = '" + tien + "'");
+        }
     }
 }

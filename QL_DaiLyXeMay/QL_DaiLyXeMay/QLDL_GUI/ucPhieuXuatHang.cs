@@ -68,6 +68,7 @@ namespace QL_DaiLyXeMay
                         txbTraTruoc.Text = "0";
                         txbNgayLapPhieu.Text = "";
                         txbNguoiLapPhieu.Text = "";
+                        PhieuXuatHangDAO.Instance.updateTienNo(txbConLai.Text);
                     }
                 }
                

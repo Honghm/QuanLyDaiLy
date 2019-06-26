@@ -37,6 +37,17 @@ namespace QL_DaiLyXeMay.QLDL_DAO
             int result = Data_SQL.Instance.GetNonQuery(query);
             return result > 0;
         }
+        public bool KiemTraTienThu(string ma, string tienthu)
+        {
+            string a = Data_SQL.Instance.ExecuteScalar("SELECT SoNo FROM dbo.DAILY WHERE MaDaiLy = '" + ma + "'").ToString();
+            if (double.Parse(tienthu) > double.Parse(a))
+                return true;
+            return false;
+        }
+        public void updateTienNo(string tien)
+        {
+            Data_SQL.Instance.GetNonQuery("UPDATE dbo.DAILY SET SoNo = '" + tien + "'");
+        }
       
     }
 }

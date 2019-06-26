@@ -65,6 +65,7 @@ namespace QL_DaiLyXeMay.NhanVien
                     txbSoTienThu.Text = "";
                     txbNoiDungThuTien.Text = "";
                     cbbMaDaiLy.Text = "";
+                    PhieuThuTienDAO.Instance.updateTienNo(txbSoTienThu.Text);
                 }
             }
         }
@@ -76,7 +77,8 @@ namespace QL_DaiLyXeMay.NhanVien
 
         private void txbSoTienThu_TextChanged(object sender, EventArgs e)
         {
-
+            if (PhieuThuTienDAO.Instance.KiemTraTienThu(cbbMaDaiLy.Text, txbSoTienThu.Text) == false)
+                lbNote.Visible = true;
         }
     }
 }

@@ -49,17 +49,6 @@ namespace QL_DaiLyXeMay.QLDL_GUI
         {
             txbConLai.Text = (double.Parse(txbTongTien.Text) - double.Parse(txbTraTruoc.Text)).ToString();
         }
-
-        private void btnChinhSua_Click(object sender, EventArgs e)
-        {
-            txbMaDaiLy.Enabled = true;
-            txbNguoiLap.Enabled = true;
-            txbTongTien.Enabled = true;
-            txbTraTruoc.Enabled = true;
-            txbConLai.Enabled = true;
-            dtgvChiTietPhieuXuat.Enabled = true;
-           
-        }
         
         private void btnXoa_Click(object sender, EventArgs e)
         {

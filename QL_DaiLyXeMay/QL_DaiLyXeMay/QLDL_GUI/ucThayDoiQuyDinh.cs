@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QL_DaiLyXeMay.QuanLy
+namespace QL_DaiLyXeMay.QLDL_GUI
 {
-    public partial class ucThayDoiQuyDinh : UserControl
+    public partial class ucThayDoiQuyDinh: UserControl
     {
         public ucThayDoiQuyDinh()
         {
             InitializeComponent();
+        }
+
+        private void ucThayDoiQuyDinh_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

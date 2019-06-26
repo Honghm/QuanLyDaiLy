@@ -119,29 +119,7 @@ namespace QL_DaiLyXeMay
 
         #endregion
 
-        #region Chức năng Kho hàng
-        private void lbKhoHang_Click(object sender, EventArgs e)
-        {
-            if (pnKhoHang.Visible == false)
-                pnKhoHang.Visible = true;
-            else
-                pnKhoHang.Visible = false;
-        }
-
-        private void lbLapPhieuNhapHang_Click(object sender, EventArgs e)
-        {
-            ////ucPhieuNhapHang PhieuNhapHang = new ucPhieuNhapHang();
-            //pnChiTietChucNang.Controls.Clear();
-            //pnChiTietChucNang.Controls.Add(PhieuNhapHang);
-        }
-
-        private void lbQuanLyKho_Click(object sender, EventArgs e)
-        {
-            //ucQuanLyKho QuanLyKho = new ucQuanLyKho();
-            //pnChiTietChucNang.Controls.Clear();
-            //pnChiTietChucNang.Controls.Add(QuanLyKho);
-        }
-
+ 
         //Chức năng thay đổi quy định
         private void lbThayDoiQuyDinh_Click(object sender, EventArgs e)
         {
@@ -149,10 +127,7 @@ namespace QL_DaiLyXeMay
             pnChiTietChucNang.Controls.Clear();
             pnChiTietChucNang.Controls.Add(ThayDoiQuyDinh);
         }
-
-      
-        #endregion
-
+        
         #region Xử lý sự kiện chuột của các label
         #region lbQuanLy
         private void lbQuanLy_MouseLeave(object sender, EventArgs e)
@@ -272,46 +247,6 @@ namespace QL_DaiLyXeMay
         {
             lbLapBaoCaoCongNo.ForeColor = Color.Red;
         }
-
-        #endregion
-
-        #region lbKhoHang
-        private void lbKhoHang_MouseLeave(object sender, EventArgs e)
-        {
-            lbKhoHang.ForeColor = Color.White;
-        }
-
-        private void lbKhoHang_MouseMove(object sender, MouseEventArgs e)
-        {
-            lbKhoHang.ForeColor = Color.Red;
-        }
-
-        #endregion
-
-        #region lbLapPhieuNhapHang
-        private void lbLapPhieuNhapHang_MouseLeave(object sender, EventArgs e)
-        {
-            lbLapPhieuNhapHang.ForeColor = Color.White;
-        }
-
-        private void lbLapPhieuNhapHang_MouseMove(object sender, MouseEventArgs e)
-        {
-            lbLapPhieuNhapHang.ForeColor = Color.Red;
-        }
-
-        #endregion
-
-        #region lbQuanLyKho
-        private void lbQuanLyKho_MouseLeave(object sender, EventArgs e)
-        {
-            lbQuanLyKho.ForeColor = Color.White;
-        }
-
-        private void lbQuanLyKho_MouseMove(object sender, MouseEventArgs e)
-        {
-            lbQuanLyKho.ForeColor = Color.Red;
-        }
-
 
         #endregion
 

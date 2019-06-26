@@ -48,6 +48,7 @@
             this.txbSoTienThu = new System.Windows.Forms.TextBox();
             this.txbNgayLap = new System.Windows.Forms.TextBox();
             this.cbbMaDaiLy = new System.Windows.Forms.ComboBox();
+            this.lbNote = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLapPhieu
@@ -245,11 +246,23 @@
             this.cbbMaDaiLy.TabIndex = 59;
             this.cbbMaDaiLy.SelectedIndexChanged += new System.EventHandler(this.cbbMaDaiLy_SelectedIndexChanged);
             // 
+            // lbNote
+            // 
+            this.lbNote.AutoSize = true;
+            this.lbNote.ForeColor = System.Drawing.Color.Red;
+            this.lbNote.Location = new System.Drawing.Point(250, 341);
+            this.lbNote.Name = "lbNote";
+            this.lbNote.Size = new System.Drawing.Size(167, 17);
+            this.lbNote.TabIndex = 60;
+            this.lbNote.Text = "*Số tiền thu không hợp lệ";
+            this.lbNote.Visible = false;
+            // 
             // ucPhieuThuTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
+            this.Controls.Add(this.lbNote);
             this.Controls.Add(this.cbbMaDaiLy);
             this.Controls.Add(this.txbNgayLap);
             this.Controls.Add(this.txbSoTienThu);
@@ -299,5 +312,6 @@
         private System.Windows.Forms.TextBox txbSoTienThu;
         private System.Windows.Forms.TextBox txbNgayLap;
         private System.Windows.Forms.ComboBox cbbMaDaiLy;
+        private System.Windows.Forms.Label lbNote;
     }
 }
